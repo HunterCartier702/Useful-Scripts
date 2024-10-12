@@ -12,7 +12,7 @@ read -p "Password: " password
 
 read -p "Target IP: " ip 
 
-echo "[+] bloodhound-python -d $domain -u $username -p $password -ns $ip -c all
+echo "[+] bloodhound-python -d $domain -u $username -p $password -ns $ip -c all"
 bloodhound-python -d $domain -u $username -p $password -ns $ip -c all
 
 sleep 2
