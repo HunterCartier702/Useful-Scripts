@@ -17,5 +17,6 @@ bloodhound-python -d $domain -u $username -p $password -ns $ip -c all
 
 sleep 2
 
+# Starts BloodHound Community Edition (BHCE) with Docker Compose 
 curl -L https://ghst.ly/getbhce | sudo docker compose -f - up
 
