@@ -3,7 +3,7 @@
 # Quick script so you don't have to remember blood-hound syntax
 # Need docker-compose installed for last line which will start docker instance: 
 # sudo apt update && sudo apt install docker-compose -y
-# Verbose output hence the echoed commands
+# Verbose output hence the echoed commands (a personal preference)
 
 read -p "Domain (ex. Company.local): " domain
 
