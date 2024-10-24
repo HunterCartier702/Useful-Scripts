@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Quickly enumerate directories for keywords that may contain version info. I used Joomla CMS in this example. I grabbed a list of directories from /robots.txt
+# Quickly enumerate directories for keywords that may contain version info or anything interesting. I used Joomla CMS in this example. I grabbed a list of directories from /robots.txt
 # Use this as an example to create your own script and automate as much as you can
 
 url="ip:port" #Change this
