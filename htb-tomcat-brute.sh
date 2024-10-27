@@ -3,7 +3,7 @@
 # Hackthebox module Attacking Common Web Applications: Attacking Tomcat
 # Another hackthebox challenge. Bruteforce Tomcat login. They said, "use cURL to brute force login," so I made a script.
 
-url="http://IP:8180/manager/html"
+url="http://IP:PORT/manager/html"
 userFile="/usr/share/metasploit-framework/data/wordlists/tomcat_mgr_default_users.txt"
 passFile="/usr/share/metasploit-framework/data/wordlists/tomcat_mgr_default_pass.txt"
 
