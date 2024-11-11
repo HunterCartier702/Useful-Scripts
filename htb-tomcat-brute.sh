@@ -16,8 +16,7 @@ while IFS= read -r user; do
 
         # Send the GET request with the Authorization header
         response=$(curl -s -o /dev/null -w "%{http_code}" -X GET "$url" \
-            -H "Cookie: JSESSIONID=<Add_ID>" \ # Add your ID
-            -H "Priority: u=0, i" \
+            -H "Cookie: JSESSIONID=<Add_ID>" \ # Add your ID. Delete if not needed.
             -H "Authorization: Basic $userPass")
 
         # Check if the response code indicates success
