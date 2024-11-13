@@ -10,17 +10,17 @@ __  _| |_ _ __ ___  ___| |_/ / | | | |_/ /
                                                                                     	
 EOF
 
-# Quick script to use xfreerdp to remote into windows machines with or without a drive attached
+# Quick script to use xfreerdp to remote into windows machines with or without an attached shared directory feature which allows you to access files and folders between the local machine and the remote desktop.
 
 read -p "IP: " IP
 read -p "Username: " user
 read -p "Password: " pass
-read -p "/drive: (Optional) Press Enter to Continue: " SHAREPATH # Example: /home/$USER/skripts or type . for current directory
+read -p "/drive: (Optional) Press Enter to Continue: " SHAREPATH # Example: /home/$USER or type . for current directory
 
 if [ -z "$SHAREPATH" ]; then
 	echo "[+] xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution"
 	xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution
 else
 	echo "[+] xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution /drive:New_Share,$SHAREPATH"
-	xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution /drive:New_Share,$SHAREPATH
+	xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution /drive:Share,$SHAREPATH
 fi
