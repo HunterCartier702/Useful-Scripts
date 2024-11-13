@@ -15,7 +15,7 @@ EOF
 read -p "IP: " IP
 read -p "Username: " user
 read -p "Password: " pass
-read -p "/drive: (Optional) Press Enter to Continue: " SHAREPATH # Example: /home/$USER/skripts
+read -p "/drive: (Optional) Press Enter to Continue: " SHAREPATH # Example: /home/$USER/skripts or type . for current directory
 
 if [ -z "$SHAREPATH" ]; then
 	echo "[+] xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution"
