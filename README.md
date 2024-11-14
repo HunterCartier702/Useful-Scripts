@@ -1,4 +1,4 @@
-# Just some useful scripts that I use or to help with Hackthebox CTF's. 
+# Just some useful scripts that I use or to help with Hackthebox boxes. 
  In BASH: 
  
  chmod u+x <script_Name> 
