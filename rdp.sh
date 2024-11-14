@@ -21,6 +21,6 @@ if [ -z "$SHAREPATH" ]; then
 	echo "[+] xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution"
 	xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution
 else
-	echo "[+] xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution /drive:New_Share,$SHAREPATH"
+	echo "[+] xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution /drive:Share,$SHAREPATH"
 	xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution /drive:Share,$SHAREPATH
 fi
