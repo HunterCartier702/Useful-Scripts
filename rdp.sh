@@ -10,7 +10,7 @@ __  _| |_ _ __ ___  ___| |_/ / | | | |_/ /
                                                                                     	
 EOF
 
-# Quick script to use xfreerdp to remote into windows machines with or without an attached shared directory
+# use xfreerdp to remote into windows machines with or without an attached shared directory & transfer files easily 
 read -p "IP: " IP
 read -p "Username: " user
 echo -n "Password [hidden for security]: "
@@ -18,7 +18,7 @@ stty -echo        # Disable echoing
 read pass         # Read the password
 stty echo         # Re-enable echoing
 echo
-read -p "/drive: (Optional) Press Enter to Continue: " SHAREPATH # Example: /home/$USER or type . for current directory
+read -p "Add drive: (Optional) Enter to Continue: " SHAREPATH # Example: /home/$USER or type . for current directory
 
 if [ -z "$SHAREPATH" ]; then
 	echo "[+] xfreerdp /v:$IP /u:$user /p:'****' /dynamic-resolution"
