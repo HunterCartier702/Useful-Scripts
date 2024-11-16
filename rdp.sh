@@ -10,8 +10,7 @@ __  _| |_ _ __ ___  ___| |_/ / | | | |_/ /
                                                                                     	
 EOF
 
-# Quick script to use xfreerdp to remote into windows machines with or without an attached shared directory feature which allows you to access files and folders between the local machine and the remote desktop.
-
+# Quick script to use xfreerdp to remote into windows machines with or without an attached shared directory
 read -p "IP: " IP
 read -p "Username: " user
 read -p "Password: " pass
