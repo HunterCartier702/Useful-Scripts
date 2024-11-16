@@ -13,7 +13,11 @@ EOF
 # Quick script to use xfreerdp to remote into windows machines with or without an attached shared directory
 read -p "IP: " IP
 read -p "Username: " user
-read -p "Password: " pass
+echo -n "Password [hidden for security]: "
+stty -echo        # Disable echoing
+read pass         # Read the password
+stty echo         # Re-enable echoing
+echo
 read -p "/drive: (Optional) Press Enter to Continue: " SHAREPATH # Example: /home/$USER or type . for current directory
 
 if [ -z "$SHAREPATH" ]; then
