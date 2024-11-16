@@ -18,7 +18,7 @@ stty -echo        # Disable echoing
 read pass         # Read the password
 stty echo         # Re-enable echoing
 echo
-read -p "Add drive: (Optional) Enter to Continue: " SHAREPATH # Example: /home/$USER or type . for current directory
+read -p "Add drive (Optional) Enter to Continue: " SHAREPATH # Example: /home/$USER or type . for current directory
 
 if [ -z "$SHAREPATH" ]; then
 	echo "[+] xfreerdp /v:$IP /u:$user /p:'****' /dynamic-resolution"
