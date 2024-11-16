@@ -13,7 +13,7 @@ EOF
 # use xfreerdp to remote into windows machines with or without an attached shared directory & transfer files easily 
 read -p "IP: " IP
 read -p "Username: " user
-echo -n "Password [hidden for security]: "
+echo -n "Password [hidden]: "
 stty -echo        # Disable echoing
 read pass         # Read the password
 stty echo         # Re-enable echoing
