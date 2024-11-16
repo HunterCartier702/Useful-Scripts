@@ -18,9 +18,9 @@ read -p "Password: " pass
 read -p "/drive: (Optional) Press Enter to Continue: " SHAREPATH # Example: /home/$USER or type . for current directory
 
 if [ -z "$SHAREPATH" ]; then
-	echo "[+] xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution"
+	echo "[+] xfreerdp /v:$IP /u:$user /p:'****' /dynamic-resolution"
 	xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution
 else
-	echo "[+] xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution /drive:Share,$SHAREPATH"
+	echo "[+] xfreerdp /v:$IP /u:$user /p:'****' /dynamic-resolution /drive:Share,$SHAREPATH"
 	xfreerdp /v:$IP /u:$user /p:$pass /dynamic-resolution /drive:Share,$SHAREPATH
 fi
