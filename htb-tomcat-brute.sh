@@ -16,7 +16,6 @@ while IFS= read -r user; do
 
         # Send the GET request with the Authorization header
         response=$(curl -s -o /dev/null -w "%{http_code}" -X GET "$url" \
-            -H "Priority: u=0, i" \
             -H "Authorization: Basic $userPass")
 
         # Check if the response code indicates success
