@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# For HacktheBox module:
-# Basic curl request with XML LFI and PHP filters done for HacktheBox. Easily completed with Burp, but automate everything. Decode base64 string to get API key
+# For HacktheBox module Web Attacks: Local File Disclosure
+# Basic curl request with XXE, LFI, and PHP filters done for HacktheBox
 
 # Change IP
 request=$(curl -s -X POST "http://<IP>/submitDetails.php" \
