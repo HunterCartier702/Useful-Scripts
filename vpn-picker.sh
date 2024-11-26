@@ -10,10 +10,11 @@ cat <<'EOF'
                                                 
 EOF
 
-# Quick script to pick a VPN file for my fellow skids
-# Edit to your need
+# Quick script to pick a VPN file if you have mutiple from hackthebox and tryhackme
+# Edit to your personal need
 
-echo -e "Pick a vpn file m4st3r h4xxor: \n"
+echo -e "Pick a vpn file: \n"
+
 echo "[*] 0 = academy-HTB.ovpn"
 echo "[*] 1 = lab-HTB.ovpn"
 echo "[*] 2 = tryhackme.ovpn"
