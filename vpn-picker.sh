@@ -22,16 +22,16 @@ echo "[*] 3 = AD-THM.ovpn"
 echo
 read -p "Enter a number to pick a vpn file: " vpn
 echo
-if [ "$vpn" -eq 0 ]; then
+if [[ "$vpn" -eq 0 ]]; then
 	echo "[+] academy-HTB.ovpn"
 	sudo openvpn academy-HTB.ovpn
-elif [ "$vpn" -eq 1 ]; then
+elif [[ "$vpn" -eq 1 ]]; then
 	echo "[+] lab-HTB.ovpn"
 	sudo openvpn lab-HTB.ovpn
-elif [ "$vpn" -eq 2 ]; then
+elif [[ "$vpn" -eq 2 ]]; then
 	echo "[+] tryhackme.ovpn"
 	sudo openvpn tryhackme.ovpn
-elif [ "$vpn" -eq 3 ]; then 
+elif [[ "$vpn" -eq 3 ]]; then 
 	echo "[+] AD-THM.ovpn"
 	sudo openvpn AD-THM.ovpn
 else
