@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Notes to help understand pointers
+
 void printAge(int *pAge)
 {
 	printf("You are %d\n", *pAge); //in order to access value of the address stored within the pointer, dereference
